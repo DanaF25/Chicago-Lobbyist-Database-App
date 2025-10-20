@@ -1,0 +1,21 @@
+-- SELECT Client_Name, LobbyistInfo.Lobbyist_ID, First_Name, Last_Name, Phone, SUM(Compensation_Amount) as total FROM LobbyistInfo
+-- JOIN Compensation ON Compensation.Lobbyist_ID = LobbyistInfo.Lobbyist_ID
+-- JOIN ClientInfo ON ClientInfo.Client_ID = Compensation.Client_ID
+-- WHERE strftime('%Y', Period_Start) = '2023' OR strftime('%Y', Period_End) = '2023'
+-- GROUP BY LobbyistInfo.Lobbyist_ID
+-- ORDER BY total desc
+-- LIMIT 3
+
+-- SELECT Client_Name,LobbyistInfo.Lobbyist_ID FROM LobbyistInfo
+-- JOIN Compensation ON Compensation.Lobbyist_ID = LobbyistInfo.Lobbyist_ID
+-- JOIN ClientInfo ON ClientInfo.Client_ID = Compensation.CLient_ID
+-- WHERE LobbyistInfo.Lobbyist_ID = '14921' AND (strftime('%Y', Period_Start) = '2023' OR strftime('%Y', Period_End) = '2023')
+-- GROUP BY Client_Name
+-- ORDER BY Client_Name asc;
+
+-- SELECT Client_Name FROM ClientInfo
+-- JOIN Compensation ON ClientInfo.Client_ID = Compensation.Client_ID
+-- JOIN LobbyistInfo ON LobbyistInfo.Lobbyist_ID = Compensation.Lobbyist_ID
+-- WHERE First_Name = 'PATRICK' AND Last_Name = 'CAREY' AND (strftime('%Y', Period_Start) = '2023' OR strftime('%Y', Period_End) = '2023')
+-- GROUP BY CLient_Name
+-- ORDER BY Client_Name asc
